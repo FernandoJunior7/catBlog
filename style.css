@@ -44,8 +44,8 @@ header label {
   color: #fff;
   font-weight: 600;
   position: absolute;
-  top: 25%;
-  left: 8%;
+  top: 10px;
+  left: 14px; 
 }
 
 header input {
@@ -62,6 +62,8 @@ main .container {
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
+
+  margin-bottom: 2rem;
 }
 
 #main-blog-img {
@@ -88,9 +90,9 @@ p {
 }
 
 /* ASIDE */
-aside {
-  display: flex;
+aside .container {
   flex-direction: column;
+  align-items: flex-start;
   gap: 2rem;
 
   margin-bottom: 2.5rem;
@@ -132,4 +134,33 @@ footer {
 
 footer .container {
   justify-content: center;
+}
+
+/* @media */
+@media (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+     grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  aside {
+    grid-area: aside;
+  }
+
+  footer {
+    grid-area: footer;
+  }
 }
